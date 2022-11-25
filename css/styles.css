@@ -815,9 +815,15 @@ a {
     height: 45px;
     border-radius: 4px;
     padding-left: 35px;
+    cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
 }
-
+.modal-input:focus {
+    border-color: var(--title-text-color);
+}
+.modal-input:focus + .input-icon {
+    fill: var(--title-text-color);
+}
 .modal-input:not(:focus):not(:placeholder-shown):valid {
     background-color: rgba(0, 128, 0, 0.276);
 }
