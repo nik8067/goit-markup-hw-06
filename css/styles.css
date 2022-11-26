@@ -810,9 +810,35 @@ a {
 .text-area {
     width: 100%;
     height: 120px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+    padding-left: 12px;
     border: 1px solid var(--input-area-color);
     border-radius: 4px;
     resize: none;
+}
+.line {
+    position: relative;
+}
+.policy-uptitle {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+.policy-uptitle::after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--title-text-color);
+}
+.button.push {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 200px;;
 }
 .input-wrapper {
     position: relative;
@@ -820,7 +846,7 @@ a {
 }
 .modal-input {
     width: 100%;
-    height: 45px;
+    height: 40px;
     border-radius: 4px;
     padding-left: 35px;
     cursor: pointer;
