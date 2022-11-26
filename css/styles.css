@@ -15,6 +15,7 @@
     --footer-soc-link: rgba(255, 255, 255, 0.1);
     --backdrop-color-fon: rgba(0, 0, 0, 0.2);
     --portfolio-card-fon: rgba(47, 48, 58, 0.8);
+    --input-area-color: rgba(33, 33, 33, 0.2);
 }
 /**------CSS для сторінки СТУДІЯ---------*/
 .page {
@@ -806,6 +807,13 @@ a {
     letter-spacing: 0.01em;
     color: var(--accent-text-color);
 }
+.text-area {
+    width: 100%;
+    height: 120px;
+    border: 1px solid var(--input-area-color);
+    border-radius: 4px;
+    resize: none;
+}
 .input-wrapper {
     position: relative;
     margin-bottom: 10px;
@@ -816,7 +824,7 @@ a {
     border-radius: 4px;
     padding-left: 35px;
     cursor: pointer;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--input-area-color);
 }
 .modal-input:focus {
     border-color: var(--title-text-color);
