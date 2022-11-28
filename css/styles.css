@@ -16,6 +16,9 @@
     --backdrop-color-fon: rgba(0, 0, 0, 0.2);
     --portfolio-card-fon: rgba(47, 48, 58, 0.8);
     --input-area-color: rgba(33, 33, 33, 0.2);
+    --modal-btg-color: rgba(0, 0, 0, 0.15);
+    --button-modal-color: rgba(0, 0, 0, 0.1);
+    --text-modal-footer-btg: rgba(255, 255, 255, 0.6);
 }
 /**------CSS для сторінки СТУДІЯ---------*/
 .page {
@@ -231,8 +234,7 @@ button {
     border: none;
 }
 .button {
-    display: inline-block;
-    padding: 10px 32px;
+    height: 50px;
     border-radius: 4px;
     min-width: 216px;
     font-weight: 700;
@@ -614,6 +616,75 @@ background-image: url("../images/astronaut.svg");
 .footer-uptitle-link:focus {
     background-color: var(--title-text-color);
 }
+/***------INPUT-FOOTER-------------*/
+.modal-footer {
+    display: flex;
+}
+.footer-text {
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--white-fons-color);
+}
+.footer-label {
+    margin-right: 12px;
+}
+.footer-input:focus,
+.footer-input:hover {
+  border-color: var(--button-fons-color);
+  outline: var(--button-fons-color);
+}
+/*
+.footer-label {
+    display: flexbox;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--white-fons-color);
+}*/
+.form-footer {
+   margin-left: 70px;
+}
+.footer-input {
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    padding: 16px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    background-color: #2F303A;
+}
+.footer-input::placeholder, .footer-input {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+.button.putt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.putt:hover,
+.button.putt:focus {
+    box-shadow: 0px 4px 4px var(--modal-btg-color);
+}
+.footer-icon {
+    margin-left: 10px;
+}
 /**-------------Прибираємо курсив Подвал*/
 a {
     font-style: normal;
@@ -817,12 +888,15 @@ a {
     border-radius: 4px;
     resize: none;
 }
+
+/***--------CheckBOX-------------------*/
 .line {
     position: relative;
 }
 .policy-uptitle {
     font-size: 14px;
     letter-spacing: 0.03em;
+    margin-left: 8px;
     color: var(--title-text-color);
 }
 .policy-uptitle::after {
@@ -834,12 +908,59 @@ a {
     left: 0;
     background-color: var(--title-text-color);
 }
+.policy-title {
+    display: flex;
+    align-items: center;
+    color: var(--accent-text-color);
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 8px;
+}
+.policy-title span {
+    width: 16px;
+    height: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+
+    fill: transparent;
+}
+.modal-check:checked + .policy-title span {
+    background-color: var(--title-text-color);
+    border: none;
+    fill: var(--white-fons-color);
+}
+.modal-check:focus + .policy-title span {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .button.push {
     display: flex;
     justify-content: center;
-    text-align: center;
-    width: 200px;;
+    align-items: center;
+
+    min-width: 200px;
+    border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form .button {
+    margin: 0 auto;
+}
+.button.push:hover,
+.button.push:focus {
+    background-color: var(--button-fons-color);
+    box-shadow: 0px 4px 4px var(--modal-btg-color);
+}
+/**-----------------------------------*/
 .input-wrapper {
     position: relative;
     margin-bottom: 10px;
@@ -878,7 +999,7 @@ a {
     width: 30px;
     height: 30px;
 
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--button-modal-color);
     border-radius: 50%;
     cursor: pointer;
 
