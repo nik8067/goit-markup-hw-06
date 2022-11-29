@@ -648,7 +648,7 @@ background-image: url("../images/astronaut.svg");
     color: var(--white-fons-color);
 }*/
 .form-footer {
-   margin-left: 70px;
+   margin-left: auto;
 }
 .footer-input {
     width: 358px;
@@ -875,6 +875,7 @@ a {
     font-weight: 400;
     font-size: 12px;
     margin-bottom: 4px;
+    margin-top: 10px;
     letter-spacing: 0.01em;
     color: var(--accent-text-color);
 }
@@ -888,7 +889,13 @@ a {
     border-radius: 4px;
     resize: none;
 }
+.text-area::placeholder, .text-area {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 
+}
 /***--------CheckBOX-------------------*/
 .line {
     position: relative;
@@ -910,6 +917,7 @@ a {
 }
 .policy-title {
     display: flex;
+    justify-content: center;
     align-items: center;
     color: var(--accent-text-color);
     letter-spacing: 0.03em;
@@ -963,7 +971,6 @@ a {
 /**-----------------------------------*/
 .input-wrapper {
     position: relative;
-    margin-bottom: 10px;
 }
 .modal-input {
     width: 100%;
